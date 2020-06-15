@@ -13,12 +13,12 @@ function setTimeBlockColor(hour, timeBlock) {
     }
 }
 
-function createRow(hourIndex) {
+function createRow(hourIndex, bAM) {
     var container = $(".container");
     var row = $("<div>").addClass("row");
-    var hour = $("<div>").addClass("hour col-md-2").text("" + hourIndex + "AM");
+    var hour = $("<div>").addClass("hour col-md-2").text("" + hourIndex + (bAM ? "AM" : "PM"));
     var timeBlock = $("<textArea>").addClass("time-block description col-md-8").attr("data-hour", hourIndex);
-    setTimeBlockColor(hourIndex, timeBlock);
+    setTimeBlockColor(bAM ? hourIndex : hourIndex + 12, timeBlock);
     var text;
     if (text = localStorage.getItem(hourIndex)) {
         timeBlock.text(text);
@@ -32,12 +32,12 @@ function createRow(hourIndex) {
 
 //AM business hours
 for (var hourIndex = 9; hourIndex < 13; hourIndex++) {
-    createRow(hourIndex);
+    createRow(hourIndex, true);
 }
 
 //PM business hours
 for (var hourIndex = 1; hourIndex < 6; hourIndex++) {
-    createRow(hourIndex);
+    createRow(hourIndex, false);
 }
 
 $(".saveBtn").click(function () {
