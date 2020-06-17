@@ -1,6 +1,6 @@
 # Work Day Scheduler
 
-This app (https://kambiz-frounchi.github.io/homework-5/) is a simple calendar application that allows the user to save events for each hour of the day. It will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+This app (https://kambiz-frounchi.github.io/homework-5/) is a simple calendar application that allows the user to save events for each hour of the day (standard business hours only). It will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
 It uses the [Moment.js](https://momentjs.com/) library to display the date at the top of the calendar and jQuery for DOM manipulation.
 
@@ -35,4 +35,5 @@ THEN the saved events persist
 The following animation demonstrates the application functionality:
 
 ![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
+![screenshot1](./screenshots/image1.jpg)
 
