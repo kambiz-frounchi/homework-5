@@ -45,8 +45,7 @@ $(".saveBtn").click(function () {
     var textArea = $("textArea[data-hour=" + dataHour + "]");
 
     var text = textArea.val();
-    if (text) {
-        localStorage.setItem(dataHour, text);
-    }
+    localStorage.setItem(dataHour, text);
+    
 });
 
