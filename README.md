@@ -34,5 +34,5 @@ THEN the saved events persist
 
 Here are a few screenshots that showcase the app:
 
-![screenshot1](./screenshots/image1.jpg)
+![screenshot](./screenshots/screenshot.jpg)
 
